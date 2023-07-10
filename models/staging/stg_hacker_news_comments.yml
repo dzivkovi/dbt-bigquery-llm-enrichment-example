@@ -1,0 +1,16 @@
+version: 2
+
+models:
+  - name: stg_hacker_news_comments
+    description: This model contains sample comments from Hacker News
+    columns:
+      - name: id
+        description: Unique identifier for each comment
+        tests:
+          - unique
+      - name: content
+        description: The content of the comment
+        tests:
+          - not_null
+      - name: created_at
+      - name: created_by
