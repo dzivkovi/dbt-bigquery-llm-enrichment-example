@@ -1,6 +1,14 @@
-Welcome to your new dbt project!
+# dbt-biguqery-llm-enrichment-example
 
-### Using the starter project
+## Setup
+
+Create a connection of Cloud Resource type in BigQuery:
+
+> Replace `YOUR_REGION` and `YOUR_PROJECT_ID` with your own values
+
+```bash
+bq mk --connection --location=YOUR_REGION --project_id=YOUR_PROJECT_ID --connection_type=CLOUD_RESOURCE cloud_resources_connection
+```
 
 Try running the following commands:
 - dbt run

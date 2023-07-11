@@ -1,0 +1,28 @@
+version: 2
+
+models:
+  - name: hacker_news_comments_moderated
+    description: This model contains sample comments from Hacker News with a moderation decision
+    columns:
+      - name: id
+        description: Unique identifier for each comment
+        tests:
+          - unique
+      - name: content
+        description: The content of the comment
+        tests:
+          - not_null
+      - name: moderation_decision
+        description: The moderation decision for the comment
+        tests:
+          - not_null
+          - accepted_values:
+              values:
+                - APPROVE
+                - REJECT
+      - name: moderation_explanation
+        description: The explanation for the moderation decision
+        tests:
+          - not_null
+      - name: created_at
+      - name: created_by

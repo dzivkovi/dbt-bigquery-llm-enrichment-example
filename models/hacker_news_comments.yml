@@ -1,7 +1,7 @@
 version: 2
 
 models:
-  - name: comments
+  - name: hacker_news_comments
     description: This model contains sample comments from Hacker News
     columns:
       - name: id

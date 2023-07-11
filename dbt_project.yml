@@ -9,6 +9,10 @@ config-version: 2
 # This setting configures which "profile" dbt uses for this project.
 profile: 'dbt_bigquery_llm_enrichment_example'
 
+# Variables
+vars:
+  call_llm_model_cloud_function_url: "{{ env_var('CALL_LLM_MODEL_CLOUD_FUNCTION_URL') }}"
+
 # These configurations specify where dbt should look for different types of files.
 # The `model-paths` config, for example, states that models in this project can be
 # found in the "models/" directory. You probably won't need to change these!
