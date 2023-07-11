@@ -1,0 +1,4 @@
+functions-framework==3.4.0
+openai==0.27.8
+tenacity==8.2.2
+google-cloud-aiplatform==1.28.0

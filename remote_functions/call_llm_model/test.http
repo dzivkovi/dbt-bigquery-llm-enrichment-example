@@ -1,0 +1,33 @@
+# Test calling for completion with OpenAI GPT-4 API
+POST http://localhost:8080 HTTP/1.1
+content-type: application/json
+
+{
+    "calls": [
+        [
+            "How are you?"
+        ]
+    ],
+    "userDefinedContext": {
+        "model": "openai-gpt-4",
+        "system_prompt": "You are friendly assistant"
+    }
+}
+
+###
+
+# Test calling for completion with Google PaLM API served on VertexAI
+POST http://localhost:8080 HTTP/1.1
+content-type: application/json
+
+{
+    "calls": [
+        [
+            "How are you?"
+        ]
+    ],
+    "userDefinedContext": {
+        "model": "vertexai-palm",
+        "system_prompt": "You are friendly assistant"
+    }
+}
