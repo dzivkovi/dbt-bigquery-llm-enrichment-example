@@ -46,7 +46,7 @@ options (
     max_batching_rows = {{ max_rows_batch }},
     user_defined_context = [
         ("system_prompt", "{{ system_prompt_sanitized }}"),
-        ("model", "openai-gpt-4")
+        ("model", "vertexai-palm")
     ]
 )
 {% endset %}

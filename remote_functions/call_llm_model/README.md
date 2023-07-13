@@ -87,7 +87,7 @@ gcloud secrets create openai-api-key --replication-policy=automatic
 Set value of the secret in Cloud Console or using the CLI:
 
 ```bash
-echo -n "this is my super secret data" | gcloud secrets versions add openai-api-key --data-file=-
+echo -n "this is my super secret OpenAI API key" | gcloud secrets versions add openai-api-key --data-file=-
 ```
 
 Grant access to a secret to the Cloud Functions service account:
@@ -101,5 +101,5 @@ Deploy to Cloud Functions:
 > Vertex AI require no extra setup for deployment
 
 ```bash
-gcloud functions deploy call_llm_model --entry-point proces_calls --runtime python311 --trigger-http --allow-unauthenticated --set-secrets="OPENAI_API_KEY=openai-api-key:latest"
+gcloud functions deploy call_llm_model --gen2 --region us-central1 --entry-point proces_calls --runtime python311 --trigger-http --allow-unauthenticated --set-secrets="OPENAI_API_KEY=openai-api-key:latest"
 ```
